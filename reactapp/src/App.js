@@ -1,5 +1,6 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import React,{useState
 
 function App() {
 
@@ -9,7 +10,7 @@ function App() {
 
 const handleSubmit = (e) => {
   e.preventDefault();
-  setGreeting(`Hello,$(name)`);
+  setGreeting(`Hello,${name}`);
 }
   return (
     <div className="App">
@@ -18,7 +19,10 @@ const handleSubmit = (e) => {
         <form onSubmit={handleSubmit} data-testid="form">
           <label data-testid="label">Enter name :</label>
           <input type="text" value={name} onChange={handleChange}/>
-          <button type="submit"
+          <button type="submit" data-testid="buttonElement">Say Hello</button>
+          </form>
+          {greeting && <h2>{greeting}</h2>}
+    </div>
     </div>
   );
 }
