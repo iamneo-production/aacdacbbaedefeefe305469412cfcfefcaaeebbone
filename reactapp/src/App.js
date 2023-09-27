@@ -1,10 +1,13 @@
 //import logo from './logo.svg';
 import './App.css';
-import React,{useState
+import React,{useState} from 'react';
 
 function App() {
 
   const [name,setName] = useState('');
+  const[greeting,setGreeting] = useState('');
+
+const handleChange = (e) =>{
   setName(e.target.value);
 }
 
